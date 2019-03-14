@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>My orders</h1>
+<table>
+    <tr>
+        <td>Order Id</td>
+        <td>Order Title</td>
+        <td>Order Amount</td>
+        <td>Action</td>
+    </tr>
+    <% orders.forEach(function(order){ %>
+    <tr>
+        <td><%= order.id %></td>
+        <td><%= order.title %></td>
+        <td><%= order.amount %></td>
+        <td><a target="_blank" href="/pay?orderId=<%= order.id %>">Go to Pay</a></td>
+    </tr>
+    <% }); %>
+</table>
+<style>
+    h1 {
+        text-align: center;
+    }
+    table {
+        width: 100%;
+    }
+</style>
+<script>
+</script>
+</body>
+</html>
